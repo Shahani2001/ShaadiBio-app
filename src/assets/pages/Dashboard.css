@@ -1,0 +1,194 @@
+.dashboard {
+  padding: var(--space-xl) 0;
+  min-height: calc(100vh - 70px);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-header h1 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-xs);
+}
+
+.dashboard-header p {
+  color: var(--text-secondary);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--space-xxl);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184, 134, 11, 0.1);
+  color: var(--primary);
+  font-size: 2rem;
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-lg);
+}
+
+.empty-state h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Biodata Grid */
+.biodata-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-lg);
+}
+
+.biodata-card {
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.biodata-card:hover {
+  transform: translateY(-4px);
+}
+
+.biodata-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--space-md);
+}
+
+.biodata-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.biodata-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.biodata-info h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-xs);
+}
+
+.biodata-info p {
+  color: var(--text-secondary);
+  font-size: var(--fs-small);
+}
+
+.biodata-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-small);
+}
+
+.detail-item span:first-child {
+  color: var(--text-secondary);
+}
+
+.detail-item span:last-child {
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+}
+
+.template-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(184, 134, 11, 0.1);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  text-transform: capitalize;
+  font-size: var(--fs-xs);
+}
+
+.biodata-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-light);
+}
+
+.date-text {
+  font-size: var(--fs-xs);
+  color: var(--text-light);
+}
+
+.biodata-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.action-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background: var(--error);
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .dashboard-header .btn {
+    width: 100%;
+  }
+
+  .biodata-grid {
+    grid-template-columns: 1fr;
+  }
+}

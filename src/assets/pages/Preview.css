@@ -1,0 +1,429 @@
+.preview-page {
+  min-height: calc(100vh - 70px);
+  background: var(--background);
+}
+
+.preview-toolbar {
+  background: var(--card-bg);
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+}
+
+.template-switcher {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.template-btn {
+  padding: var(--space-sm) var(--space-lg);
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.template-btn:hover {
+  border-color: var(--primary);
+}
+
+.template-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.preview-actions {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.preview-container {
+  padding: var(--space-xl) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.biodata-preview {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Classic Template */
+.template.classic {
+  font-family: 'Playfair Display', serif;
+}
+
+.template.classic .template-header {
+  background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+  padding: var(--space-xxl);
+  text-align: center;
+}
+
+.template.classic .profile-section .profile-image {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto var(--space-lg);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.template.classic .profile-section .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template.classic .profile-section h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: var(--space-xs);
+}
+
+.template.classic .profile-section .age {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.template.classic .template-body {
+  padding: var(--space-xl);
+}
+
+.template.classic .info-section {
+  margin-bottom: var(--space-xl);
+}
+
+.template.classic .info-section h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.template.classic .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.template.classic .info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.template.classic .info-item .label {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+}
+
+.template.classic .info-item .value {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.template.classic .about-section {
+  background: var(--background);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-lg);
+}
+
+.template.classic .about-section h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.template.classic .about-section p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Modern Template */
+.template.modern {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.template.modern .modern-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: var(--space-xxl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  color: white;
+}
+
+.template.modern .modern-profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+}
+
+.template.modern .modern-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template.modern .modern-info h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.template.modern .modern-profession {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+.template.modern .modern-stats {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.template.modern .modern-stats span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+}
+
+.template.modern .modern-body {
+  padding: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.template.modern .modern-section {
+  margin-bottom: var(--space-md);
+}
+
+.template.modern .modern-section h3 {
+  font-size: 1rem;
+  color: #667eea;
+  margin-bottom: var(--space-sm);
+}
+
+.template.modern .modern-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  font-size: var(--fs-small);
+}
+
+.template.modern .modern-section.about {
+  grid-column: 1 / -1;
+  background: #f8f9fa;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+}
+
+/* Elegant Template */
+.template.elegant {
+  font-family: 'Playfair Display', serif;
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.template.elegant .elegant-header {
+  text-align: center;
+  padding: var(--space-xxl);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.template.elegant .elegant-border-top,
+.template.elegant .elegant-border-bottom {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #DAA520, transparent);
+  margin: var(--space-md) auto;
+}
+
+.template.elegant .elegant-profile {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto var(--space-lg);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #DAA520;
+  box-shadow: 0 0 30px rgba(218, 165, 32, 0.3);
+}
+
+.template.elegant .elegant-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template.elegant .elegant-header h1 {
+  font-size: 2.5rem;
+  color: #DAA520;
+  margin-bottom: var(--space-xs);
+}
+
+.template.elegant .elegant-profession {
+  font-size: 1.125rem;
+  color: #999;
+  margin-bottom: var(--space-md);
+}
+
+.template.elegant .elegant-details {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  color: #ccc;
+  font-size: var(--fs-small);
+}
+
+.template.elegant .elegant-details .divider {
+  color: #DAA520;
+}
+
+.template.elegant .elegant-body {
+  padding: var(--space-xl);
+}
+
+.template.elegant .elegant-section {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid #333;
+}
+
+.template.elegant .elegant-section:last-child {
+  border-bottom: none;
+}
+
+.template.elegant .elegant-section h3 {
+  font-size: 1.125rem;
+  color: #DAA520;
+  margin-bottom: var(--space-md);
+}
+
+.template.elegant .elegant-section ul {
+  list-style: none;
+}
+
+.template.elegant .elegant-section li {
+  margin-bottom: var(--space-sm);
+  color: #ccc;
+  font-size: var(--fs-small);
+}
+
+.template.elegant .elegant-section li strong {
+  color: #DAA520;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.template.elegant .elegant-section.about {
+  background: #252525;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid #DAA520;
+}
+
+.template.elegant .elegant-section.about p {
+  font-style: italic;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .preview-toolbar .container {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .template-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .preview-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .template.classic .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template.modern .modern-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .template.modern .modern-body {
+    grid-template-columns: 1fr;
+  }
+
+  .template.elegant .elegant-details {
+    flex-wrap: wrap;
+  }
+}
+
+/* View Biodata Page */
+.view-biodata {
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+.view-header {
+  background: var(--card-bg);
+  padding: var(--space-lg) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.view-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.view-logo svg {
+  color: var(--accent);
+}
+
+.view-container {
+  flex: 1;
+  padding: var(--space-xl) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.view-footer {
+  background: var(--text-primary);
+  color: white;
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.view-footer p {
+  color: var(--text-light);
+  font-size: var(--fs-small);
+}
+
+.view-footer a {
+  color: var(--primary-light);
+}
